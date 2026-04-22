@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ulfa Khairina — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-letters">
+        <span>Welcome to My World</span>
+      </div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-sub">Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS DOTS -->
+  <div class="scroll-progress" id="scrollProgress">
+    <div class="sp-dot active" data-section="home"     title="Home"></div>
+    <div class="sp-dot"        data-section="about"    title="About"></div>
+    <div class="sp-dot"        data-section="skills"   title="Skills"></div>
+    <div class="sp-dot"        data-section="projects" title="Projects"></div>
+    <div class="sp-dot"        data-section="gallery"  title="Gallery"></div>
+    <div class="sp-dot"        data-section="contact"  title="Contact"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="logo-box">U</span>
+      <span class="logo-name">Ulfa<span class="accent">.</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"     class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#gallery"  class="nav-link" data-section="gallery">Gallery</a></li>
+      <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section id="home" class="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <div class="noise-overlay"></div>
+
+
+    <!-- Centre hero content -->
+    <div class="hero-center">
+      <p class="hero-greeting stagger-1">Hello, I'm</p>
+      <h1 class="hero-name stagger-2">Upaa<span class="accent">.</span></h1>
+      <div class="hero-sub stagger-3">
+        <span class="hero-sub-line">Student Informatics</span>
+        <span class="hero-sub-sep">|</span>
+        <span class="hero-sub-line">Syiah Kuala University</span>
+      </div>
+      <p class="hero-invite stagger-4">
+        Get to know me better — let's dive in<span class="invite-dots"><span>.</span><span>.</span><span>.</span></span>
+      </p>
+      <div class="hero-cta stagger-5">
+        <a href="#about"   class="btn btn-primary mag-btn"><i class="fas fa-user"></i> About Me</a>
+        <a href="#contact" class="btn btn-outline mag-btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Floating ambient chips -->
+    <div class="hero-chip chip-1 stagger-2"><i class="fab fa-react"></i> React</div>
+    <div class="hero-chip chip-2 stagger-3"><i class="fab fa-python"></i> Python</div>
+    <div class="hero-chip chip-3 stagger-4"><i class="fab fa-java"></i> Java</div>
+    <div class="hero-chip chip-4 stagger-3"><i class="fas fa-database"></i> MySQL</div>
+    <div class="hero-chip chip-5 stagger-2"><i class="fab fa-figma"></i> Figma</div>
+    <div class="hero-chip chip-6 stagger-4"><i class="fab fa-git-alt"></i> Git</div>
+
+    <div class="scroll-down">
+      <span>Scroll</span>
+      <div class="sd-line"></div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,80 L0,80 Z" fill="var(--bg-2)"/>
+    </svg>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>FULL STACK DEVELOPER</span><em>✦</em>
+      <span>UI/UX DESIGN</span><em>✦</em>
+      <span>WEB DEVELOPMENT</span><em>✦</em>
+      <span>JAVASCRIPT</span><em>✦</em>
+      <span>OPEN TO COLLABORATE</span><em>✦</em>
+      <span>FULL STACK DEVELOPER</span><em>✦</em>
+      <span>UI/UX DESIGN</span><em>✦</em>
+      <span>WEB DEVELOPMENT</span><em>✦</em>
+      <span>JAVASCRIPT</span><em>✦</em>
+      <span>OPEN TO COLLABORATE</span><em>✦</em>
+    </div>
+  </div>
+
+
+  <!-- ════ ABOUT ════ -->
+  <section id="about" class="section about">
+    <div class="noise-overlay light"></div>
+    <div class="container">
+      <div class="sec-label reveal-fade"><span></span>About Me</div>
+      <div class="about-grid">
+
+        <!-- Left: photo -->
+        <div class="about-left reveal-left">
+          <div class="about-img-box">
+            <img src="photos/about_me.jpg" alt="Ulfa Khairina" class="about-photo"/>
+            <div class="aib-deco d1"></div>
+            <div class="aib-deco d2"></div>
+          </div>
+        </div>
+
+        <!-- Right: text -->
+        <div class="about-right reveal-right">
+          <h2 class="sec-title">Passionate <em>developer</em><br>&amp; creative thinker.</h2>
+          <blockquote>"Whoever strives shall succeed."</blockquote>
+          <p>Saya adalah mahasiswa Informatika di <strong>Universitas Syiah Kuala</strong> yang memiliki minat besar dalam pengembangan Full Stack dan teknologi web modern.</p>
+          <p>Dengan pengalaman dalam berbagai proyek mulai dari aplikasi web, sistem basis data, hingga desain UI/UX — saya terus mengembangkan kemampuan teknis dan kreatif.</p>
+          <div class="about-facts">
+            <div class="fact"><span class="fact-l">Name</span><span class="fact-v">Ulfa Khairina</span></div>
+            <div class="fact"><span class="fact-l">Address</span><span class="fact-v">Bithak, Kuta Cot Glie, Aceh Besar</span></div>
+            <div class="fact"><span class="fact-l">Age</span><span class="fact-v">19 Tahun</span></div>
+            <div class="fact"><span class="fact-l">Status</span><span class="fact-v accent">Pelajar/Mahasiswa</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider wave-alt">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,20 C240,60 480,0 720,30 C960,60 1200,10 1440,30 L1440,0 L0,0 Z" fill="var(--bg-2)"/>
+    </svg>
+  </div>
+
+  <!-- ════ SKILLS ════ -->
+  <section id="skills" class="section skills">
+    <div class="noise-overlay"></div>
+    <div class="container">
+      <div class="sec-label reveal-fade"><span></span>Tech Stack</div>
+      <h2 class="sec-title text-center reveal-fade">Tools &amp; <em>Technologies</em></h2>
+
+      <div class="skill-tabs reveal-fade">
+        <button class="stab active" data-target="fe">Frontend</button>
+        <button class="stab" data-target="be">Backend</button>
+        <button class="stab" data-target="tl">Tools &amp; Others</button>
+      </div>
+
+      <div class="skill-panels">
+        <!-- Frontend: removed Tailwind, Next.js -->
+        <div class="skill-panel active" id="panel-fe">
+          <div class="sk-card reveal-stagger" style="--d:0.0s"><div class="sk-icon"><i class="fab fa-react" style="color:#61DAFB"></i></div><span>React</span><div class="sk-bar"><div style="--w:85%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.06s"><div class="sk-icon"><i class="fab fa-js-square" style="color:#F7DF1E"></i></div><span>JavaScript</span><div class="sk-bar"><div style="--w:80%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.12s"><div class="sk-icon"><i class="fab fa-html5" style="color:#E34F26"></i></div><span>HTML5</span><div class="sk-bar"><div style="--w:90%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.18s"><div class="sk-icon"><i class="fab fa-css3-alt" style="color:#1572B6"></i></div><span>CSS3</span><div class="sk-bar"><div style="--w:85%"></div></div></div>
+        </div>
+        <!-- Backend: removed Node.js, MongoDB, Express -->
+        <div class="skill-panel" id="panel-be">
+          <div class="sk-card reveal-stagger" style="--d:0.0s"><div class="sk-icon"><i class="fab fa-python" style="color:#3776AB"></i></div><span>Python</span><div class="sk-bar"><div style="--w:70%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.06s"><div class="sk-icon"><i class="fab fa-java" style="color:#007396"></i></div><span>Java</span><div class="sk-bar"><div style="--w:65%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.12s"><div class="sk-icon"><i class="fas fa-database" style="color:#4479A1"></i></div><span>MySQL</span><div class="sk-bar"><div style="--w:78%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.18s"><div class="sk-icon"><i class="fas fa-code" style="color:#A8B9CC"></i></div><span>C Language</span><div class="sk-bar"><div style="--w:60%"></div></div></div>
+        </div>
+        <!-- Tools: removed Postman, Docker -->
+        <div class="skill-panel" id="panel-tl">
+          <div class="sk-card reveal-stagger" style="--d:0.0s"><div class="sk-icon"><i class="fab fa-git-alt" style="color:#F05032"></i></div><span>Git</span><div class="sk-bar"><div style="--w:88%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.06s"><div class="sk-icon"><i class="fab fa-github" style="color:#ccc"></i></div><span>GitHub</span><div class="sk-bar"><div style="--w:85%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.12s"><div class="sk-icon"><i class="fab fa-figma" style="color:#F24E1E"></i></div><span>Figma</span><div class="sk-bar"><div style="--w:72%"></div></div></div>
+          <div class="sk-card reveal-stagger" style="--d:0.18s"><div class="sk-icon"><i class="fas fa-terminal" style="color:#4EC9B0"></i></div><span>VS Code</span><div class="sk-bar"><div style="--w:95%"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,50 C200,10 400,70 600,40 C800,10 1000,60 1200,35 C1320,20 1400,50 1440,40 L1440,80 L0,80 Z" fill="var(--bg)"/>
+    </svg>
+  </div>
+
+  <!-- ════ PROJECTS ════ -->
+  <section id="projects" class="section projects">
+    <div class="noise-overlay"></div>
+    <div class="container">
+      <div class="sec-label reveal-fade"><span></span>Project Team</div>
+      <h2 class="sec-title text-center reveal-fade">Featured <em>Projects</em></h2>
+      <p class="proj-hint reveal-fade"><i class="fas fa-hand-pointer"></i> Klik kartu untuk melihat detail proyek</p>
+
+      <div class="proj-grid">
+
+        <div class="proj-card flip-card reveal-stagger" style="--d:0.05s">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="proj-thumb">
+                <div class="proj-thumb-bg" style="--hue:30"><i class="fab fa-java"></i></div>
+                <span class="proj-featured-badge">Featured</span>
+              </div>
+              <div class="proj-body">
+                <div class="proj-tags"><span>Java</span><span>OOP</span><span>MySQL</span></div>
+                <h3>Java — Online Shop</h3>
+                <p>Kosmetik &amp; Skincare E-Commerce</p>
+              </div>
+              <div class="flip-hint"><i class="fas fa-rotate"></i> Klik untuk detail</div>
+            </div>
+            <div class="flip-back">
+              <div class="fb-icon"><i class="fab fa-java"></i></div>
+              <h3>Java — Online Shop (Kosmetik &amp; Skincare)</h3>
+              <p>Mengembangkan aplikasi toko online berbasis Java yang memungkinkan pengguna melihat produk, melakukan pembelian, serta mengelola data kosmetik dan skincare secara terstruktur.</p>
+              <div class="proj-tags"><span>Java</span><span>OOP</span><span>MySQL</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card flip-card reveal-stagger" style="--d:0.1s">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="proj-thumb">
+                <div class="proj-thumb-bg" style="--hue:0"><i class="fas fa-tint"></i></div>
+              </div>
+              <div class="proj-body">
+                <div class="proj-tags"><span>SQL</span><span>Database</span></div>
+                <h3>SQL Developer</h3>
+                <p>Sistem Donor Darah</p>
+              </div>
+              <div class="flip-hint"><i class="fas fa-rotate"></i> Klik untuk detail</div>
+            </div>
+            <div class="flip-back">
+              <div class="fb-icon"><i class="fas fa-tint"></i></div>
+              <h3>SQL Developer — Sistem Donor Darah</h3>
+              <p>Merancang dan mengelola basis data untuk sistem donor darah yang menyimpan informasi pendonor, riwayat donor, serta membantu pencarian data secara efisien dan terorganisir.</p>
+              <div class="proj-tags"><span>SQL</span><span>Database</span><span>ERD</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card flip-card reveal-stagger" style="--d:0.15s">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="proj-thumb">
+                <div class="proj-thumb-bg" style="--hue:280"><i class="fab fa-figma"></i></div>
+              </div>
+              <div class="proj-body">
+                <div class="proj-tags"><span>Figma</span><span>UI/UX</span></div>
+                <h3>Figma — NatureCheck App</h3>
+                <p>Prototype Wisata Alam</p>
+              </div>
+              <div class="flip-hint"><i class="fas fa-rotate"></i> Klik untuk detail</div>
+            </div>
+            <div class="flip-back">
+              <div class="fb-icon"><i class="fab fa-figma"></i></div>
+              <h3>Figma — NatureCheck App</h3>
+              <p>Mendesain prototype aplikasi "NatureCheck" menggunakan Figma — platform untuk membantu pengguna mengeksplorasi destinasi wisata sebelum bepergian, dengan tampilan user-friendly dan informatif.</p>
+              <div class="proj-tags"><span>Figma</span><span>UI/UX</span><span>Prototype</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card flip-card reveal-stagger" style="--d:0.2s">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="proj-thumb">
+                <div class="proj-thumb-bg" style="--hue:200"><i class="fas fa-code"></i></div>
+              </div>
+              <div class="proj-body">
+                <div class="proj-tags"><span>C</span><span>Struktur Data</span></div>
+                <h3>C Language</h3>
+                <p>Sistem Berbasis Struktur Data</p>
+              </div>
+              <div class="flip-hint"><i class="fas fa-rotate"></i> Klik untuk detail</div>
+            </div>
+            <div class="flip-back">
+              <div class="fb-icon"><i class="fas fa-code"></i></div>
+              <h3>C Language — Sistem Berbasis Struktur Data</h3>
+              <p>Mengembangkan sistem peminjaman alat laboratorium, antrean bank, serta platform "Berbekas.id" untuk jual beli barang bekas dengan penerapan konsep struktur data.</p>
+              <div class="proj-tags"><span>C</span><span>Linked List</span><span>Queue</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card flip-card reveal-stagger" style="--d:0.25s">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="proj-thumb">
+                <div class="proj-thumb-bg" style="--hue:120"><i class="fab fa-python"></i></div>
+              </div>
+              <div class="proj-body">
+                <div class="proj-tags"><span>Python</span><span>Math</span></div>
+                <h3>Python — Regula Falsi</h3>
+                <p>Kalkulator Metode Numerik</p>
+              </div>
+              <div class="flip-hint"><i class="fas fa-rotate"></i> Klik untuk detail</div>
+            </div>
+            <div class="flip-back">
+              <div class="fb-icon"><i class="fab fa-python"></i></div>
+              <h3>Python — Kalkulator Metode Regula Falsi</h3>
+              <p>Membuat kalkulator Python untuk menghitung akar persamaan non-linear dengan metode Regula Falsi, membantu analisis numerik secara sistematis dan akurat.</p>
+              <div class="proj-tags"><span>Python</span><span>Numerik</span><span>Math</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C300,10 600,70 900,35 C1100,15 1300,55 1440,30 L1440,80 L0,80 Z" fill="var(--bg-2)"/>
+    </svg>
+  </div>
+
+  <!-- ════ GALLERY ════ -->
+  <section id="gallery" class="section gallery">
+    <div class="noise-overlay light"></div>
+    <div class="container">
+      <div class="sec-label reveal-fade"><span></span>Gallery</div>
+      <h2 class="sec-title text-center reveal-fade">Moments &amp; <em>Memories</em></h2>
+      <p class="proj-hint reveal-fade"><i class="fas fa-hand-pointer"></i> Klik foto untuk fullscreen</p>
+
+      <div class="gallery-slider-wrap reveal-fade">
+        <button class="gal-nav gal-prev" id="galPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="gal-nav gal-next" id="galNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="gallery-slider" id="gallerySlider">
+          <!-- 6 Landscape -->
+          <div class="gal-slide landscape" data-caption="Healing Time"><div class="gal-img-wrap"><img src="photos/photo1.jpg" alt="Healing"/><div class="gal-overlay"><span>Healing Time</span></div></div></div>
+          <div class="gal-slide landscape" data-caption="INFEST Event"><div class="gal-img-wrap"><img src="photos/photo2.jpg" alt="Infest"/><div class="gal-overlay"><span>INFEST Event</span></div></div></div>
+          <div class="gal-slide landscape" data-caption="Mantab Fair"><div class="gal-img-wrap"><img src="photos/photo3.jpg" alt="Fair"/><div class="gal-overlay"><span>Mantab Fair</span></div></div></div>
+          <div class="gal-slide landscape" data-caption="Ngobar Session"><div class="gal-img-wrap"><img src="photos/photo4.jpg" alt="Ngobar"/><div class="gal-overlay"><span>Ngobar Session</span></div></div></div>
+          <div class="gal-slide landscape" data-caption="Pelantikan Aksara"><div class="gal-img-wrap"><img src="photos/photo5.jpg" alt="Pelantikan"/><div class="gal-overlay"><span>Pelantikan Aksara</span></div></div></div>
+          <div class="gal-slide landscape" data-caption="Takjil on the Road"><div class="gal-img-wrap"><img src="photos/photo6.jpg" alt="Takjil"/><div class="gal-overlay"><span>Takjil on the Road</span></div></div></div>
+          <!-- 11 Portrait -->
+          <div class="gal-slide portrait" data-caption="Bukber HMIF"><div class="gal-img-wrap"><img src="photos/photo7.jpg" alt="Bukber HMIF"/><div class="gal-overlay"><span>Bukber HMIF</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Ramen Time"><div class="gal-img-wrap"><img src="photos/photo8.jpg" alt="Ramen"/><div class="gal-overlay"><span>Ramen Time</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Besti"><div class="gal-img-wrap"><img src="photos/photo9.jpg" alt="Besti"/><div class="gal-overlay"><span>Besti</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Bukber Kelas B"><div class="gal-img-wrap"><img src="photos/photo10.jpg" alt="Bukber"/><div class="gal-overlay"><span>Bukber Kelas B</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Integer Event"><div class="gal-img-wrap"><img src="photos/photo11.jpg" alt="Integer"/><div class="gal-overlay"><span>Integer Event</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Kota Vibes"><div class="gal-img-wrap"><img src="photos/photo12.jpg" alt="Kota"/><div class="gal-overlay"><span>Kota Vibes</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Self Portrait"><div class="gal-img-wrap"><img src="photos/photo13.jpg" alt="Me"/><div class="gal-overlay"><span>Self Portrait</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Shopping Day"><div class="gal-img-wrap"><img src="photos/photo14.jpg" alt="Shopping"/><div class="gal-overlay"><span>Shopping Day</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Sunset"><div class="gal-img-wrap"><img src="photos/photo15.jpg" alt="Sunset"/><div class="gal-overlay"><span>Sunset</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Upgrading"><div class="gal-img-wrap"><img src="photos/photo16.jpg" alt="Upgrading"/><div class="gal-overlay"><span>Upgrading</span></div></div></div>
+          <div class="gal-slide portrait" data-caption="Photobot"><div class="gal-img-wrap"><img src="photos/photo17.jpg" alt="Photobot"/><div class="gal-overlay"><span>Photobot</span></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lb-backdrop" id="lbBackdrop"></div>
+    <div class="lb-content">
+      <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+      <button class="lb-nav lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="lb-nav lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+      <div class="lb-img-wrap"><img id="lbImg" src="" alt=""/></div>
+      <div class="lb-caption" id="lbCaption"></div>
+      <div class="lb-counter" id="lbCounter"></div>
+    </div>
+  </div>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,30 C400,70 800,10 1200,50 C1320,60 1400,30 1440,20 L1440,0 L0,0 Z" fill="var(--bg-2)"/>
+    </svg>
+  </div>
+
+  <!-- ════ CONTACT ════ -->
+  <section id="contact" class="section contact">
+    <div class="noise-overlay"></div>
+    <div class="container">
+      <div class="sec-label reveal-fade"><span></span>Get In Touch</div>
+      <div class="contact-hero reveal-fade">
+        <h2>Let's <em>Work</em><br/>Together<span class="accent">.</span></h2>
+        <p>Mari berkolaborasi dan ciptakan sesuatu yang amazing!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Form -->
+        <form class="cform reveal-left" id="cform">
+          <div class="cform-group">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Nama lengkap kamu" required/>
+          </div>
+
+          <div class="cform-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="email@contoh.com" required/>
+          </div>
+
+          <div class="cform-group">
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tulis pesanmu disini" required></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-full mag-btn" type="submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+
+          <p class="form-success" id="formSuccess">✅ Pesan terkirim! Terima kasih.</p>
+          <div class="messages" id="messagesContainer"></div> 
+
+        </form>
+
+        <!-- Sidebar: Social Media Grid -->
+        <div class="csidebar reveal-right">
+          <div class="csidebar-card glass-card">
+            <h3>Find Me On</h3>
+            <div class="social-grid">
+              <a href="https://github.com/Ulfakhairinaa" target="_blank" class="soc-tile mag-btn gh">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://t.me/UlfaKhairina" target="_blank" class="soc-tile mag-btn tg">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+              </a>
+              <a href="https://instagram.com/ulfakhairinaa_" target="_blank" class="soc-tile mag-btn ig">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+              <a href="https://wa.me/085270859188" target="_blank" class="soc-tile mag-btn wa">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=khairinaulfa328@gmail.com" class="soc-tile mag-btn em">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+              </a>
+              <a href="https://tiktok.com/@ulfakhairyna" target="_blank" class="soc-tile mag-btn tt">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+              </a>
+              <a href="https://youtube.com/@UlfaKhairina-w1p" target="_blank" class="soc-tile mag-btn yt">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+              </a>
+            </div>
+          </div>
+          <div class="csidebar-quote glass-card">
+            <i class="fas fa-quote-left"></i>
+            <p>"Whoever strives shall succeed."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#home" class="footer-logo"><span class="logo-box">U</span> Ulfa Khairina</a>
+      <p>&copy; 2026 — Ulfa Khairina </p>
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
